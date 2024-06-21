@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    "jazzmin",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "order",
     "canteen",
+    
 ]
 
 MIDDLEWARE = [
@@ -138,3 +140,23 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 # MEDIA_URL= 'food_pic/'
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'food_pic')
+
+JAZZMIN_SETTINGS = {
+    "site_title": "KNP MESS ADMIN",
+    "site_header": "MESS ADMIN",
+    "welcome_sign": "Welcome to KNP-FOS Admin",
+    "show_sidebar": True,
+    "navigation_expanded": True,
+    "hide_apps": ["auth"],
+    "hide_models": ["auth.User"],
+    "order_with_respect_to": ["app", "model"],
+    "icons": {
+        "auth": "fas fa-users-cog",
+        "auth.user": "fas fa-user",
+        "auth.Group": "fas fa-users",
+    },
+    "related_modal_active": False,
+    "custom_css": None,
+    "custom_js": None,
+    "show_ui_builder": True,
+}
