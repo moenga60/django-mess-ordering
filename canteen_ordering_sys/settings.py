@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "order",
     "canteen",
+    "mpesa",
     
 ]
 
@@ -52,6 +53,19 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
+MPESA_CONFIG = {
+    'CONSUMER_KEY': 'xKfIPt144qAp2SkK9p0Q4g1b5QVpLRAN',
+    'CONSUMER_SECRET': '2CNJGtUoeqN8n3Rr',
+    'CERTIFICATE_FILE': None,
+    'HOST_NAME': 'https://558d-41-90-187-109.ngrok.io',
+    'PASS_KEY': 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919',
+    'SAFARICOM_API': 'https://sandbox.safaricom.co.ke',
+    'AUTH_URL': '/oauth/v1/generate?grant_type=client_credentials',
+    'SHORT_CODE': '174379',
+    'TILL_NUMBER': None,
+    'TRANSACTION_TYPE': 'CustomerBuyGoodsOnline',
+}
 
 ROOT_URLCONF = "canteen_ordering_sys.urls"
 
